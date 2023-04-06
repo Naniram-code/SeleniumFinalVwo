@@ -4,12 +4,8 @@ import base.BasePage;
 import org.openqa.selenium.By;
 import utils.PropertyReaderOptimized;
 
+
 public class Loginpage extends BasePage {
-    //WebDriver driver;
-
-
-
-
                     By text=By.xpath("//h5[@id='js-sign-in-heading']");
                     By username=By.id("login-username");
                     By Password=By.name("password");

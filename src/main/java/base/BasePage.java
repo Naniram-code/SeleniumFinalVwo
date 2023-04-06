@@ -22,6 +22,7 @@ public class BasePage {
     {
         DriverManager.getDriver().get(url);
     }
+
     public void waitForElementToAppear(By elementLocation){
         new WaitForHelper(DriverManager.getDriver()).presenceOfElement(elementLocation);
     }
@@ -32,7 +33,11 @@ public class BasePage {
     }
 
     public void click(By elementlocation){DriverManager.getDriver().findElement(elementlocation).click();}
+
     public void click(WebElement elementlocation){elementlocation.click();}
+    public void switchToIframe(String iframeName) {
+        DriverManager.getDriver().switchTo().frame(iframeName);
+    }
 
     public void writetext(By elementlocation,String text ){
         DriverManager.getDriver().findElement(elementlocation).clear();
@@ -45,7 +50,9 @@ public class BasePage {
     public String readText(By elementLocation){
         return DriverManager.getDriver().findElement(elementLocation).getText();
      }
-
+    public String PageTitle(){
+        return DriverManager.getDriver().getTitle();
+    }
 
     public void moveToElement(By elementLocation){ new Actions(DriverManager.getDriver()).
             moveToElement(DriverManager.getDriver().findElement(elementLocation)).click().build().perform();}

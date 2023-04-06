@@ -24,18 +24,12 @@ public class DashbordPage extends BasePage {
         waitForElementToAppear(Usermenu);
         moveToElement(LogOutUser);}
 
-    public DashbordPage LogOutUserFromDashbord(){
-            UsermenuOpt();
-            logOut();
-            waitForLoading();
-            return this;
-
-
-           }
-
-    //public Loginpage afterlogin() {
-       // return new Loginpage();
-    //}
+    public DashbordPage LogOutUserFromDashbord() {
+        UsermenuOpt();
+        logOut();
+        waitForLoading();
+        return this;
+    }
 }
 
 

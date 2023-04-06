@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test thread-count="2" verbose="2" parallel="methods" preserve-order="true" name="SeleniumAdvanceStatic_ThreadLocal">
+        <classes>
+            <class name="tests.UI.End_to_End_Test">
+                <methods>
+                    <include name="LogOut"/>
+                </methods>
+            </class>
+            <class name="tests.UI.LoginTest">
+                <methods>
+                    <include name="PositiveLogin"/>
+                    <include name="LogOut"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
