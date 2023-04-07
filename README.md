@@ -30,3 +30,5 @@ Open the link of Heatmap
 With Action class click on the Link to open the variation.
 Verify that you are able to click on the Click map
 
+
+mvn clean test -Dsurefire.suiteXmlFiles=/path/to/testng.xml
