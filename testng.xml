@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
+    <listeners>
+        <listener class-name="utils.Listener"></listener>
+    </listeners>
     <test thread-count="2" parallel="methods" verbose="2" preserve-order="true" name="SeleniumAdvanceStatic_ThreadLocal">
         <classes>
             <class name="tests.UI.End_to_End_Test">
@@ -11,7 +14,7 @@
             <class name="tests.UI.HeatMapTest">
                 <methods>
                     <include name="TestHeatmap"/>
-                </methods>
+                </methods>utils
             </class>
             <class name="tests.UI.LoginTest">
                 <methods>
