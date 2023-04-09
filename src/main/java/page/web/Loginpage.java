@@ -13,12 +13,17 @@ public class Loginpage extends BasePage {
 
                     By loginpageText=By.id("js-sign-in-heading");
                     By signIn=By.id("js-login-btn");
+                   By NetiveTest=By.id("js-notification-box-msg");
+
     public String LoginPagevarification() {
        waitForTitle("Login - VWO");
        return readText(text);
     }
 
-
+    public String NegetiveVerificationMsg() {
+        waitForTitle("Login - VWO");
+        return readText(NetiveTest);
+    }
 
     public Loginpage LoginVwo() throws Exception {
 

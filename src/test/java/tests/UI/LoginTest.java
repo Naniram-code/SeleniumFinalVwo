@@ -9,9 +9,7 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.TakesScreenshot;
+
 import org.testng.annotations.Test;
 
 import page.web.DashbordPage;

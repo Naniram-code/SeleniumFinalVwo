@@ -31,12 +31,12 @@ public class NegativeLoginTest extends Testbase {
 	public void NegetiveLoginvalidation(String email, String password){
 		DataDrivenlogin dataDrivenlogin=new DataDrivenlogin().LoginVwo(email,password);
 		DriverManager.getDriver().manage().window().maximize();
-		String ExpectedvalidationMassage=dataDrivenlogin.verificationMessage();
-		System.out.println("Dashboard UserName="+ExpectedvalidationMassage);
+		String ExpectedvalidationMassage=dataDrivenlogin.NegetiveVerificationMsg();
+		System.out.println("LoginPage="+ExpectedvalidationMassage);
 		Assertions.assertThat(ExpectedvalidationMassage)
 				.isNotBlank()
 				.isNotNull()
-				.contains("SIGN IN TO VWO PLATFORM");
+				.contains("Your email, password, IP address or location did not match");
 		TakescreenShott(" Vwo loginpage");
 	}}
 	

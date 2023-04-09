@@ -12,6 +12,7 @@ public class DataDrivenlogin extends BasePage {
         By checkbox=By.xpath("//*[@class='checked-login-icon text--highlight']");
 
         By loginpageText=By.id("js-sign-in-heading");
+        By NetiveTest=By.id("js-notification-box-msg");
         By signIn=By.id("js-login-btn");
         public  String verificationMessage(){
             waitForTitle("Login - VWO");
@@ -27,6 +28,10 @@ public class DataDrivenlogin extends BasePage {
         public void Checkboxclick(){moveToElement(checkbox);}
         public void loginclickButton(){
             click(signIn);}
+    public String NegetiveVerificationMsg() {
+        waitForTitle("Login - VWO");
+        return readText(NetiveTest);
+    }
 
         public DataDrivenlogin LoginVwo(String email, String password)
         {
