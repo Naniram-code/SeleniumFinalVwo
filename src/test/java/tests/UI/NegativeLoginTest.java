@@ -1,12 +1,5 @@
-/*
- * @author Naveen Khunteta
- * 
- */
 
 package tests.UI;
-
-
-
 import Base.Testbase;
 import Driver.DriverManager;
 
@@ -28,7 +21,7 @@ public class NegativeLoginTest extends Testbase {
 		return data;
 	}
 	@Test(priority=1, dataProvider="getTestData")
-	public void NegetiveLoginvalidation(String email, String password){
+	public void NegetiveLoginvalidation(String email, String password) throws Exception {
 		DataDrivenlogin dataDrivenlogin=new DataDrivenlogin().LoginVwo(email,password);
 		DriverManager.getDriver().manage().window().maximize();
 		String ExpectedvalidationMassage=dataDrivenlogin.NegetiveVerificationMsg();

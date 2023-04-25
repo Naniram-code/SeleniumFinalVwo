@@ -1,32 +1,22 @@
 package utils;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-
-import base.BasePage;
-import org.apache.commons.io.FileUtils;
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 public class excelReader  {
 	protected static WebDriver driver;
 	public static long PAGE_LOAD_TIMEOUT = 20;
 	public static long IMPLICIT_WAIT = 20;
-
 	public static String TESTDATA_SHEET_PATH = System.getProperty("user.dir") + "/src/main/resources/data.xlsx";
-
 	static Workbook book;
 	static Sheet sheet;
 	static JavascriptExecutor js;
-
 	public void switchToFrame(String frame) {
 		driver.switchTo().frame(frame);
 	}

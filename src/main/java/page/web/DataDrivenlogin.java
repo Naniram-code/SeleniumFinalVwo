@@ -2,6 +2,7 @@ package page.web;
 
 import base.BasePage;
 import org.openqa.selenium.By;
+import utils.PropertyReaderOptimized;
 
 public class DataDrivenlogin extends BasePage {
 
@@ -33,9 +34,9 @@ public class DataDrivenlogin extends BasePage {
         return readText(NetiveTest);
     }
 
-        public DataDrivenlogin LoginVwo(String email, String password)
-        {
-            goTourl("https://app.vwo.com");
+        public DataDrivenlogin LoginVwo(String email, String password) throws Exception {
+            goTourl(PropertyReaderOptimized.readKeyO("url"));
+            //goTourl("https://app.vwo.com");
             inputusername(email);
             inputpassword(password);
             Checkboxclick();
